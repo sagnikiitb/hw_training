@@ -15,12 +15,20 @@ class Drive:
         # A bit of help! These are arrays of data
         axes = inp.axes
         buttons = inp.buttons
-
-        """TODO - INSERT YOUR CODE HERE
         
-        Problem Statement: Insert Code here to make the rover move 
-        forwards, backwards, left, right according to input given
-        """
+        if(axes[1] > 0):
+            ForwardM1(self,100)
+            ForwardM2(self,100)
+        elif(axes[1] <0):
+            BackwardM1(self,100)
+            BackwardM2(self,100)
+            
+        if(axes[0] > 0):
+            TurnLeftMixed(self,100)
+        elif(axes[0] < 0):
+            TurnRIghtMixes(self,100)
+            
+
         
 
     def current_limiter(self):
